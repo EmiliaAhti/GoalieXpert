@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekisteröidy maalivahti - GoalieXpert</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <div class="logo-img">GX</div>
+                <h1><a href="index.html" style="color: #d4af37; text-decoration: none;">GoalieXpert</a></h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Takaisin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="form-container">
+        <div class="form-wrapper">
+            <h2>Rekisteröidy maalivahti</h2>
+            <p class="form-subtitle">Täytä tiedot ja löydä paras valmentaja itsellesi</p>
+
+            <form id="goalkeeperForm" class="registration-form">
+                <div class="form-section">
+                    <h3>Perustiedot</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="firstName">Etunimi *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Sukunimi *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Sähköposti *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Puhelinnumero *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="birthDate">Syntymäaika *</label>
+                            <input type="date" id="birthDate" name="birthDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Kaupunki/Paikkakunta *</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Pelitiedot</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="currentTeam">Nykyinen joukkue</label>
+                            <input type="text" id="currentTeam" name="currentTeam" placeholder="esim. TPS Juniorit">
+                        </div>
+                        <div class="form-group">
+                            <label for="playingLevel">Pelitaso *</label>
+                            <select id="playingLevel" name="playingLevel" required>
+                                <option value="">Valitse pelitaso</option>
+                                <option value="harrastaja">Harrastaja</option>
+                                <option value="seurajuniorit">Seurajuniorit</option>
+                                <option value="aluetaso">Aluetaso</option>
+                                <option value="valtakunnallinen">Valtakunnallinen</option>
+                                <option value="sm-sarja">SM-sarja</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">Kokemus maalivahtina *</label>
+                            <select id="experience" name="experience" required>
+                                <option value="">Valitse kokemus</option>
+                                <option value="alle-1v">Alle 1 vuosi</option>
+                                <option value="1-3v">1-3 vuotta</option>
+                                <option value="3-5v">3-5 vuotta</option>
+                                <option value="5-10v">5-10 vuotta</option>
+                                <option value="yli-10v">Yli 10 vuotta</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="position">Pelipaikka</label>
+                            <select id="position" name="position">
+                                <option value="maalivahti">Maalivahti</option>
+                                <option value="varamaalivahti">Varamaalivahti</option>
+                                <option value="kenttapelaaja-maalivahti">Kenttäpelaaja + Maalivahti</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Kehityskohteet</h3>
+                    <div class="form-group">
+                        <label for="weaknesses">Heikkoudet/Kehitettävät osa-alueet *</label>
+                        <div class="checkbox-grid">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="weaknesses" value="torjuntatekniikka">
+                                Torjuntatekniikka
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="weaknesses" value="jalkatyoskentely">
+                                Jalkatyöskentely
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="weaknesses" value="syotot">
+                                Syötöt
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="weaknesses" value="pelinluku">
+                                Pelinluku
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="weaknesses" value="kommunikointi">
+                                Kommunikointi
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="weaknesses" value="keskittyminen">
+                                Keskittyminen
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="weaknesses" value="yksi-vastaan-yksi">
+                                1v1 tilanteet
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="weaknesses" value="kulmapallot">
+                                Kulmapallot
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="weaknesses" value="ristisyotot">
+                                Ristisyötöt
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="weaknesses" value="henkinen-valmius">
+                                Henkinen valmius
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="goals">Henkilökohtaiset tavoitteet</label>
+                        <textarea id="goals" name="goals" rows="4" placeholder="Kerro lyhyesti, mitä haluat saavuttaa valmennuksen avulla..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Valmennustoiveet</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="preferredDays">Toivotut valmennuspäivät *</label>
+                            <div class="checkbox-grid">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="preferredDays" value="maanantai" required>
+                                    Maanantai
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="preferredDays" value="tiistai">
+                                    Tiistai
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="preferredDays" value="keskiviikko">
+                                    Keskiviikko
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="preferredDays" value="torstai">
+                                    Torstai
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="preferredDays" value="perjantai">
+                                    Perjantai
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="preferredDays" value="lauantai">
+                                    Lauantai
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="preferredDays" value="sunnuntai">
+                                    Sunnuntai
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="preferredTime">Toivottu kellonai</label>
+                            <select id="preferredTime" name="preferredTime">
+                                <option value="">Valitse kellonai</option>
+                                <option value="aamur">Aamupäivä (8-12)</option>
+                                <option value="paivä">Päivä (12-16)</option>
+                                <option value="alkuilta">Alkuilta (16-18)</option>
+                                <option value="ilta">Ilta (18-21)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="maxDistance">Matka valmentajaan (km) *</label>
+                            <select id="maxDistance" name="maxDistance" required>
+                                <option value="">Valitse etäisyys</option>
+                                <option value="5">Alle 5 km</option>
+                                <option value="10">Alle 10 km</option>
+                                <option value="20">Alle 20 km</option>
+                                <option value="50">Alle 50 km</option>
+                                <option value="100">Yli 50 km</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="trainingFrequency">Valmennustiheys *</label>
+                            <select id="trainingFrequency" name="trainingFrequency" required>
+                                <option value="">Valitse tiheys</option>
+                                <option value="kerran-viikossa">Kerran viikossa</option>
+                                <option value="2-kertaa-viikossa">2 kertaa viikossa</option>
+                                <option value="3-kertaa-viikossa">3+ kertaa viikossa</option>
+                                <option value="tarpeen-mukaan">Tarpeen mukaan</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Lisätiedot</h3>
+                    <div class="form-group">
+                        <label for="additionalInfo">Lisätietoja</label>
+                        <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Kerro muuta oleellista tietoa, erityistoiveita tai kysymyksiä..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-item terms-checkbox">
+                            <input type="checkbox" name="acceptTerms" required>
+                            Hyväksyn <a href="#" target="_blank">käyttöehdot</a> ja <a href="#" target="_blank">tietosuojaselosteen</a> *
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="newsletter">
+                            Haluan saada sähköpostitse tietoa uusista valmentajista ja tarjouksista
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Rekisteröidy</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.history.back()">Peruuta</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="goalkeeper-register.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoalieXpert - Defend with confidence, perform with excellence</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <div class="logo-img">GX</div>
+                <h1>GoalieXpert</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Koti</a></li>
+                <li><a href="#about">Tietoa</a></li>
+                <li><a href="#contact">Yhteystiedot</a></li>
+                <li><a href="#login" onclick="showLogin()">Kirjaudu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <h2>Defend with confidence, perform with excellence</h2>
+            <p>Maalivahtien valmennuspalvelu - yhdistämme maalivahdit ja maalivahtivalmentajat</p>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="services-grid">
+            <div class="service-card" onclick="openOnlineCoaching()">
+                <div class="service-icon">📚</div>
+                <h3>Verkkovalmennukset</h3>
+                <p>Ammattitaitoiset verkkovalmennuskurssit maalivahtitaitojen kehittämiseen. Opettele omaan tahtiin parhaiden valmentajien ohjauksessa.</p>
+                <button class="btn">Tutustu kursseihin</button>
+            </div>
+
+            <div class="service-card" onclick="openGoalieConnect()">
+                <div class="service-icon">🤝</div>
+                <h3>GoalieConnect</h3>
+                <p>Yhdistämme maalivahdit ja henkilökohtaiset valmentajat. Löydä itsellesi sopiva valmentaja läheltäsi tai tarjoa omia valmennuspalveluitasi.</p>
+                <button class="btn">Liity mukaan</button>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="features-container">
+                <h2>Miksi GoalieXpert?</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h4>Ammattitaitoiset valmentajat</h4>
+                        <p>Kaikki valmentajamme ovat kokeneita ja intohimoisia maalivahtivalmentajia</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Joustava aikataulutus</h4>
+                        <p>Löydä valmennusta juuri sinulle sopivaan aikaan ja paikkaan</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Henkilökohtainen kehitys</h4>
+                        <p>Keskitymme juuri sinun vahvuuksiisi ja kehityskohteihin</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Turvallinen alusta</h4>
+                        <p>Kaikki käyttäjämme ovat tarkistettuja ja luotettavia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal for login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Valitse käyttäjätyyppi</h3>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
+                <button class="btn" onclick="loginAs('goalkeeper')">Maalivahti</button>
+                <button class="btn" onclick="loginAs('coach')">Valmentaja</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 GoalieXpert. Kaikki oikeudet pidätetään.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
