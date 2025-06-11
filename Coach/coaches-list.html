@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valmentajat - GoalieXpert</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="coaches-list.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <div class="logo-img">GX</div>
+                <h1><a href="index.html" style="color: #d4af37; text-decoration: none;">GoalieXpert</a></h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Koti</a></li>
+                <li><a href="coaches-list.html">Valmentajat</a></li>
+                <li><a href="goalkeepers-list.html">Maalivahdit</a></li>
+                <li><a href="goalkeeper-register.html">Rekisteröidy maalivahti</a></li>
+                <li><a href="coach-register.html">Rekisteröidy valmentaja</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="page-header">
+            <h1>Maalivahtivalmentajat</h1>
+            <p>Löydä itsellesi sopiva maalivahtivalmentaja</p>
+        </div>
+
+        <div class="filters-section">
+            <div class="filters-container">
+                <h3>Suodattimet</h3>
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label for="cityFilter">Kaupunki</label>
+                        <select id="cityFilter">
+                            <option value="">Kaikki kaupungit</option>
+                            <option value="helsinki">Helsinki</option>
+                            <option value="espoo">Espoo</option>
+                            <option value="vantaa">Vantaa</option>
+                            <option value="turku">Turku</option>
+                            <option value="tampere">Tampere</option>
+                            <option value="oulu">Oulu</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="experienceFilter">Kokemus</label>
+                        <select id="experienceFilter">
+                            <option value="">Kaikki tasot</option>
+                            <option value="1-3v">1-3 vuotta</option>
+                            <option value="3-5v">3-5 vuotta</option>
+                            <option value="5-10v">5-10 vuotta</option>
+                            <option value="yli-10v">Yli 10 vuotta</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="priceFilter">Hinta (€/tunti)</label>
+                        <select id="priceFilter">
+                            <option value="">Kaikki hinnat</option>
+                            <option value="0-40">Alle 40€</option>
+                            <option value="40-60">40-60€</option>
+                            <option value="60-80">60-80€</option>
+                            <option value="80-100">Yli 80€</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="specialtyFilter">Erikoisalue</label>
+                        <select id="specialtyFilter">
+                            <option value="">Kaikki alueet</option>
+                            <option value="torjuntatekniikka">Torjuntatekniikka</option>
+                            <option value="jalkatyoskentely">Jalkatyöskentely</option>
+                            <option value="henkinen-valmennus">Henkinen valmennus</option>
+                            <option value="yksi-vastaan-yksi">1v1 tilanteet</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="clearFilters" class="btn btn-secondary">Tyhjennä suodattimet</button>
+            </div>
+        </div>
+
+        <div class="coaches-grid" id="coachesGrid">
+            <!-- Valmentajat ladataan JavaScript:illä -->
+        </div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            <h3>Ei tuloksia</h3>
+            <p>Ei löytynyt valmentajia valituilla kriteereillä. Kokeile muuttaa hakuehtoja.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 GoalieXpert. Kaikki oikeudet pidätetään.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="coaches-list.js"></script>
+</body>
+</html>

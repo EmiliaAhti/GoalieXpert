@@ -1,0 +1,293 @@
+/* Coaches List CSS */
+
+.page-header {
+    text-align: center;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.filters-section {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.filters-container h3 {
+    color: #d4af37;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.filters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.filter-group select {
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+    transition: border-color 0.3s ease;
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: #d4af37;
+}
+
+.coaches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.coach-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.coach-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-color: #d4af37;
+}
+
+.coach-header {
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.coach-avatar {
+    width: 80px;
+    height: 80px;
+    background: #d4af37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.coach-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.coach-location {
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.coach-content {
+    padding: 1.5rem;
+}
+
+.coach-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-item {
+    text-align: center;
+}
+
+.info-label {
+    font-size: 0.8rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #d4af37;
+    margin-top: 0.2rem;
+}
+
+.coach-specialties {
+    margin-bottom: 1.5rem;
+}
+
+.coach-specialties h4 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+.specialties-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.specialty-tag {
+    background: #f8f9fa;
+    color: #333;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid #ddd;
+}
+
+.coach-bio {
+    margin-bottom: 1.5rem;
+}
+
+.coach-bio h4 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+.bio-text {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3; /* Standard property for future compatibility */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.coach-availability {
+    margin-bottom: 1.5rem;
+}
+
+.coach-availability h4 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+.availability-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.coach-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-book {
+    background: linear-gradient(135deg, #d4af37, #f4d03f);
+    color: #1a1a1a;
+    flex: 1;
+}
+
+.btn-profile {
+    background: #6c757d;
+    color: white;
+    flex: 1;
+}
+
+.btn-profile:hover {
+    background: #5a6268;
+}
+
+.no-results {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+}
+
+.no-results h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Rating stars */
+.coach-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.star {
+    color: #ffc107;
+    font-size: 1rem;
+}
+
+.star.empty {
+    color: #ddd;
+}
+
+.rating-text {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .filters-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .coaches-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .coach-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .coach-actions {
+        flex-direction: column;
+    }
+    
+    .availability-info {
+        grid-template-columns: 1fr;
+    }
+}

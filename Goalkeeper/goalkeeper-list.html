@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maalivahdit - GoalieXpert</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="goalkeepers-list.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <div class="logo-img">GX</div>
+                <h1><a href="index.html" style="color: #d4af37; text-decoration: none;">GoalieXpert</a></h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Koti</a></li>
+                <li><a href="coaches-list.html">Valmentajat</a></li>
+                <li><a href="goalkeepers-list.html">Maalivahdit</a></li>
+                <li><a href="goalkeeper-register.html">Rekisteröidy maalivahti</a></li>
+                <li><a href="coach-register.html">Rekisteröidy valmentaja</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="page-header">
+            <h1>Maalivahdit</h1>
+            <p>Löydä sopivia oppilaita valmennettavaksesi</p>
+        </div>
+
+        <div class="filters-section">
+            <div class="filters-container">
+                <h3>Suodattimet</h3>
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label for="cityFilter">Kaupunki</label>
+                        <select id="cityFilter">
+                            <option value="">Kaikki kaupungit</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="experienceFilter">Kokemus</label>
+                        <select id="experienceFilter">
+                            <option value="">Kaikki tasot</option>
+                            <option value="alle-1v">Alle 1 vuosi</option>
+                            <option value="1-3v">1-3 vuotta</option>
+                            <option value="3-5v">3-5 vuotta</option>
+                            <option value="5-10v">5-10 vuotta</option>
+                            <option value="yli-10v">Yli 10 vuotta</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="levelFilter">Pelitaso</label>
+                        <select id="levelFilter">
+                            <option value="">Kaikki tasot</option>
+                            <option value="harrastaja">Harrastaja</option>
+                            <option value="seurajuniorit">Seurajuniorit</option>
+                            <option value="aluetaso">Aluetaso</option>
+                            <option value="valtakunnallinen">Valtakunnallinen</option>
+                            <option value="sm-sarja">SM-sarja</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="ageFilter">Ikä</label>
+                        <select id="ageFilter">
+                            <option value="">Kaikki iät</option>
+                            <option value="alle-12">Alle 12v</option>
+                            <option value="12-16">12-16v</option>
+                            <option value="17-20">17-20v</option>
+                            <option value="yli-20">Yli 20v</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="clearFilters" class="btn btn-secondary">Tyhjennä suodattimet</button>
+            </div>
+        </div>
+
+        <div class="goalkeepers-grid" id="goalkeepersGrid">
+            <!-- Maalivahdit ladataan JavaScript:illä -->
+        </div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            <h3>Ei tuloksia</h3>
+            <p>Ei löytynyt maalivahteja valituilla kriteereillä. Kokeile muuttaa hakuehtoja.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 GoalieXpert. Kaikki oikeudet pidätetään.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="goalkeepers-list.js"></script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+/* Profile CSS */
+
+.profile-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.profile-header {
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    color: white;
+    padding: 3rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    background: #d4af37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.profile-name {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-role {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.profile-location {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.profile-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.profile-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.profile-section.full-width {
+    grid-column: 1 / -1;
+}
+
+.section-title {
+    color: #d4af37;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 0.5rem;
+}
+
+.info-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.info-value {
+    color: #666;
+    text-align: right;
+}
+
+.specialties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.specialty-item {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #bbdefb;
+    font-weight: 500;
+}
+
+.bio-text {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.availability-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.availability-item {
+    background: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #c3e6cb;
+}
+
+.contact-section {
+    background: linear-gradient(135deg, #d4af37, #f4d03f);
+    color: #1a1a1a;
+    text-align: center;
+}
+
+.contact-info {
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-contact {
+    background: #1a1a1a;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-contact:hover {
+    background: #2d2d2d;
+    transform: translateY(-2px);
+}
+
+.btn-book {
+    background: white;
+    color: #d4af37;
+    padding: 1rem 2rem;
+    border: 2px solid #d4af37;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-book:hover {
+    background: #d4af37;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.rating-section {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.rating-stars {
+    display: flex;
+    justify-content: center;
+    gap: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.star {
+    color: #ffc107;
+    font-size: 1.5rem;
+}
+
+.star.empty {
+    color: #ddd;
+}
+
+.rating-text {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.age-groups-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+}
+
+.age-group-item {
+    background: #fff3cd;
+    color: #856404;
+    padding: 0.8rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #ffeaa7;
+    font-weight: 500;
+}
+
+.qualifications-list {
+    list-style: none;
+    padding: 0;
+}
+
+.qualifications-list li {
+    background: #f8f9fa;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #d4af37;
+}
+
+.no-profile {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+}
+
+.no-profile h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Loading spinner */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #d4af37;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .profile-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-header {
+        padding: 2rem 1rem;
+    }
+    
+    .profile-name {
+        font-size: 2rem;
+    }
+    
+    .contact-actions {
+        flex-direction: column;
+    }
+    
+    .specialties-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .availability-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .age-groups-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

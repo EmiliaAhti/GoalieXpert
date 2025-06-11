@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varaa tunti - GoalieXpert</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="forms.css">
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <div class="logo-img">GX</div>
+                <h1><a href="index.html" style="color: #d4af37; text-decoration: none;">GoalieXpert</a></h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="coaches-list.html">Takaisin valmentajiin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="booking-container">
+        <div class="booking-wrapper">
+            <div id="coachInfo" class="coach-info-section">
+                <!-- Valmentajan tiedot ladataan JavaScript:illä -->
+            </div>
+
+            <div class="booking-form-section">
+                <h2>Varaa valmennustunti</h2>
+                <p class="form-subtitle">Valitse sopiva aika ja lähetä varaus</p>
+
+                <form id="bookingForm" class="booking-form">
+                    <div class="form-section">
+                        <h3>Varauksen tiedot</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="preferredDate">Toivottu päivämäärä *</label>
+                                <input type="date" id="preferredDate" name="preferredDate" required min="">
+                            </div>
+                            <div class="form-group">
+                                <label for="preferredTime">Toivottu kellonaika *</label>
+                                <select id="preferredTime" name="preferredTime" required>
+                                    <option value="">Valitse aika</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="duration">Tunnin kesto *</label>
+                                <select id="duration" name="duration" required>
+                                    <option value="">Valitse kesto</option>
+                                    <option value="60">60 minuuttia</option>
+                                    <option value="90">90 minuuttia</option>
+                                    <option value="120">120 minuuttia</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Harjoituspaikka *</label>
+                                <select id="location" name="location" required>
+                                    <option value="">Valitse paikka</option>
+                                    <option value="valmentajan-paikka">Valmentajan ehdottama paikka</option>
+                                    <option value="oma-paikka">Oma harjoituspaikka</option>
+                                    <option value="sovitaan-erikseen">Sovitaan erikseen</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Valmennuksen painopisteet</h3>
+                        <div class="form-group">
+                            <label>Mitä haluaisit harjoitella? *</label>
+                            <div class="checkbox-grid">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="focus" value="torjuntatekniikka" required>
+                                    Torjuntatekniikka
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="focus" value="jalkatyoskentely">
+                                    Jalkatyöskentely
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="focus" value="syotot">
+                                    Syötöt ja aloitukset
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="focus" value="pelinluku">
+                                    Pelinluku
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="focus" value="kommunikointi">
+                                    Kommunikointi
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="focus" value="henkinen-valmennus">
+                                    Henkinen valmennus
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="focus" value="yksi-vastaan-yksi">
+                                    1v1 tilanteet
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="focus" value="kulmapallot">
+                                    Kulmapallot
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="focus" value="fyysinen-valmennus">
+                                    Fyysinen valmennus
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="additionalNotes">Lisätietoja valmennuksesta</label>
+                            <textarea id="additionalNotes" name="additionalNotes" rows="4" placeholder="Kerro tarkemmin mitä haluaisit harjoitella, onko erityisiä toiveita..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Yhteystiedot</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="clientName">Nimi *</label>
+                                <input type="text" id="clientName" name="clientName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="clientEmail">Sähköposti *</label>
+                                <input type="email" id="clientEmail" name="clientEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="clientPhone">Puhelinnumero *</label>
+                                <input type="tel" id="clientPhone" name="clientPhone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="clientAge">Ikä</label>
+                                <input type="number" id="clientAge" name="clientAge" min="5" max="60">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="booking-summary" id="bookingSummary">
+                        <!-- Yhteenveto ladataan JavaScript:illä -->
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Lähetä varaus</button>
+                        <button type="button" class="btn btn-secondary" onclick="window.history.back()">Peruuta</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 GoalieXpert. Kaikki oikeudet pidätetään.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html>
